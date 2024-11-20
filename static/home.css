@@ -1,0 +1,146 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 250px; 
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+.sidebar ul {
+    list-style-type: none;
+}
+.sidebar li {
+    padding: 15px;
+    text-align: left;
+}
+.sidebar li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.sidebar li a:hover {
+    background-color: #575757;
+}
+
+
+
+
+
+/* summary/details style */
+.expandable details {
+    background-color: #333; 
+    border: none; 
+    padding: 0; 
+}
+.expandable details summary {
+    cursor: pointer;
+    color: white;
+    padding: 10px; /* Same padding as the other items */
+    font-size: 16px;
+    background-color: #333; /* Match background color with other items */
+    border: none;
+    text-align: left;
+    width: 100%; /* Make summary take up the full width */
+    display: flex;
+    justify-content: space-between; /* Push text and arrow to opposite sides */
+    align-items: center; /* Align vertically */
+}
+
+.expandable details summary:hover {
+    background-color: #575757; /* Hover effect same as other links */
+}
+
+/* Arrow styling using ::after */
+.expandable details summary::after {
+    content: '<'; 
+
+    font-size: 18px;
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.expandable details[open] summary::after {
+    transform: rotate(-90deg); 
+}
+
+
+
+
+/* Link styling inside expandable */
+.expandable details a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: #444; /* Different background for the expanded links */
+}
+
+.expandable details a:hover {
+    background-color: #575757;
+}
+
+
+
+/* Contact section styling */
+.contact {
+    margin-top: 50px; 
+    padding: 10px;
+    font-family: Arial, sans-serif; 
+    font-size: 16px;  
+    color: white;  
+}
+.contact .social-links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.contact .social-links a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+.contact .social-links a:hover {
+    color: #575757;
+}
+
+
+
+
+
+
+
+.content-box {
+    width: 80%; 
+    max-width: 900px; 
+    margin: 30px auto; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif; 
+}
+
+.content-box h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px; 
+}
+
+.content-box p {
+    font-size: 16px;
+    line-height: 1.6; 
+    color: #555; 
+}
